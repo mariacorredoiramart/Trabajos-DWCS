@@ -11,13 +11,13 @@ if (isset($_GET["id"])) {
 $producto = null;
 if ($id != null) {
     // Para realizar una consulta para obtener los datos del producto según el id.
-    $registro_producto = $conProyecto->query("SELECT * FROM proyecto.productos WHERE id=$id;");
+    $registro_producto = $conProyecto->query("SELECT * FROM productos WHERE id=$id;");
     $producto = $registro_producto->fetch();
 }
 
 if ($producto != null) {
     // Consulta para borrar el producto
-    $query_borrar = "DELETE FROM proyecto.productos WHERE (id = '$id');";
+    $query_borrar = "DELETE FROM productos WHERE (id = '$id');";
 
     // Comenzamos transacción. No se hace autocommit.
     $conProyecto->beginTransaction();

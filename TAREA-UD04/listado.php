@@ -3,7 +3,7 @@
 require_once("conexion.php");
 
 // Obtenemos el listado de los productos
-$productos_registros = $conProyecto->query("SELECT id,nombre_completo FROM proyecto.productos;");
+$productos_registros = $conProyecto->query("SELECT id,nombre_completo FROM productos;");
 $listado_productos = $productos_registros->fetchAll();
 
 ?>

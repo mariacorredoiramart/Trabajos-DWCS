@@ -7,7 +7,7 @@ if (isset($_GET["id"])) {
     $id = $_GET["id"];
     if ($id != null) {
         // Para realizar una consulta para obtener los datos del producto según el id.
-        $registro_producto = $conProyecto->query("SELECT * FROM proyecto.productos WHERE id=$id;");
+        $registro_producto = $conProyecto->query("SELECT * FROM productos WHERE id=$id;");
         $producto = $registro_producto->fetch();
 
         // Si se encuentra el producto, extrae sus datos.

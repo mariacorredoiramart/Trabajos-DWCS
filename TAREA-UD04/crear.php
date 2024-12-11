@@ -2,7 +2,7 @@
 // Autor: María Corredoira Martínez
 require_once("conexion.php");
 // Obtener el listado de familia de la base de datos.
-$familias_registros = $conProyecto->query("SELECT * FROM proyecto.familias;");
+$familias_registros = $conProyecto->query("SELECT * FROM familias;");
 $listado_familias = $familias_registros->fetchAll();
 
 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descripcion = $_POST["descripcion"];
     $idFamilia = $_POST["familia"];
     // Consulta para insertar un nuevo producto
-    $query_guardar = "INSERT INTO proyecto.productos (nombre_completo, nombre_corto, precio, descripcion, familia) VALUES ('$nombre', '$nombreCorto', '$precio', '$descripcion', '$idFamilia');";
+    $query_guardar = "INSERT INTO productos (nombre_completo, nombre_corto, precio, descripcion, familia) VALUES ('$nombre', '$nombreCorto', '$precio', '$descripcion', '$idFamilia');";
 
     // Comenzamos transacción. No se hace autocommit.
     $conProyecto->beginTransaction();

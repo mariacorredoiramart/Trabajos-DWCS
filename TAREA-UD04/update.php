@@ -14,7 +14,7 @@ if ($id != null && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $precio = $_POST["precio"];
     $descripcion = $_POST["descripcion"];
     $id_familia = $_POST["familia"];
-    $query_actualizar = "UPDATE proyecto.productos SET nombre_completo = '$nombre', nombre_corto = '$nombre_corto' , precio = '$precio' , descripcion = '$descripcion', familia ='$id_familia' WHERE (id = '$id');";
+    $query_actualizar = "UPDATE productos SET nombre_completo = '$nombre', nombre_corto = '$nombre_corto' , precio = '$precio' , descripcion = '$descripcion', familia ='$id_familia' WHERE (id = '$id');";
 
     // Comenzamos transacción. No se hace autocommit.
     $conProyecto->beginTransaction();
@@ -32,7 +32,7 @@ if ($id != null && $_SERVER['REQUEST_METHOD'] === 'POST') {
 // Obtenemos el producto para rellenar los 
 $producto = null;
 if ($id != null) {
-    $registro_producto = $conProyecto->query("SELECT * FROM proyecto.productos WHERE id=$id;");
+    $registro_producto = $conProyecto->query("SELECT * FROM productos WHERE id=$id;");
     $producto = $registro_producto->fetch();
     if ($producto != null) {
         $nombre_completo = $producto["nombre_completo"];
@@ -44,7 +44,7 @@ if ($id != null) {
     }
 
     // Obtener el listado de familia de la base de datos.
-    $familias_registros = $conProyecto->query("SELECT * FROM proyecto.familias;");
+    $familias_registros = $conProyecto->query("SELECT * FROM familias;");
     $listado_familias = $familias_registros->fetchAll();
 
 }
