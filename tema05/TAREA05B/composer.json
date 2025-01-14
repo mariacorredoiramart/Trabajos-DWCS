@@ -1,0 +1,27 @@
+{
+    "name": "maria/tarea_dwes05b",
+    "description": "Tarea DWES05B",
+    "type": "project",
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "María Corredoira Martínez",
+            "email": "mariacormar@iesrodeira.gal"
+        }
+    ],
+    "require": {
+        "philo/laravel-blade": "^3.1",
+        "milon/barcode": "^6.0",
+        "fzaninotto/faker": "^1.5"
+    }
+}
