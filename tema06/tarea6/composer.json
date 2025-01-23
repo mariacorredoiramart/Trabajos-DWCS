@@ -1,0 +1,23 @@
+{
+    "name": "maria/tarea6",
+    "description": "Tarea DWES06",
+    "type": "project",
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "María Corredoira Martínez",
+            "email": "mariacormar@iesrodeira.gal"
+        }
+    ],
+    "require": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+        "php2wsdl/php2wsdl": "^0.7.0"
+    }
+}
