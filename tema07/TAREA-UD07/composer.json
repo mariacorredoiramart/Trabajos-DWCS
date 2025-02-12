@@ -1,0 +1,23 @@
+{
+    "name": "maria/tarea-ud07",
+    "description": "TAREA-UD07",
+    "type": "project",
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "María Corredoira Martínez",
+            "email": "mariacormar@iesrodeira.gal"
+        }
+    ],
+    "require": {
+        "jaxon-php/jaxon-core": "~4.1",
+        "jaxon-php/jaxon-js": "*"
+    }
+}
