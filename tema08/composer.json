@@ -1,0 +1,26 @@
+{
+    "name": "maria/tarea-ud08",
+    "description": "Aplicacion Reparto",
+    "type": "project",
+    "license": "gnu/gpl",
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "María Corredoira Martínez",
+            "email": "mariacormar@iesrodeira.gal"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.14",
+        "google/cloud-logging": "^1.5",
+        "jaxon-php/jaxon-core": "~4.1",
+        "jaxon-php/jaxon-js": "*"
+    }
+}
